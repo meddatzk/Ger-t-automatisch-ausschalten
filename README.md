@@ -9,7 +9,7 @@ Um diesen Blueprint zu verwenden, gehe wie folgt vor:
 1. Klicke auf den Button **Automatisierung hinzufügen** unten.
 [![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://raw.githubusercontent.com/meddatzk/Ger-t-automatisch-ausschalten/main/geraet_auto_aus.yaml)
 3. Wähle den gewünschten Trigger und fülle die erforderlichen Felder aus.
-4. Klicke auf **Blauenprint importieren**.
+4. Klicke auf **Blueprint importieren**.
 5. Wähle den "Gerät automatisch ausschalten"-Blueprint und fülle die erforderlichen Felder aus.
 
 Nachdem der Blueprint importiert wurde, kannst du ihn in deinem Home Assistant Dashboard verwenden und die folgenden Einstellungen vornehmen:
