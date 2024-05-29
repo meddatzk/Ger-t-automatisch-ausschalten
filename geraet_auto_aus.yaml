@@ -1,0 +1,34 @@
+blueprint:
+  name: Gerät automatisch ausschalten
+  description: Schaltet ein Gerät automatisch aus, nachdem es für eine bestimmte Zeit eingeschaltet war.
+  domain: automation
+  input:
+    device_entity:
+      name: Gerät Entität
+      description: Die Entität des Geräts, das überprüft werden soll.
+      selector:
+        entity:
+          domain: switch
+    delay_minutes:
+      name: Minuten bis zum Ausschalten
+      description: Die Anzahl der Minuten, nach denen das Gerät ausgeschaltet werden soll (zwischen 1 und 90 Minuten).
+      default: 45
+      selector:
+        number:
+          min: 1
+          max: 90
+          unit_of_measurement: Minuten
+
+trigger:
+  platform: device
+  type: turned_on
+  device_id: !input device_entity
+  entity_id: !input device_entity
+  domain: switch
+  for:
+    minutes: !input delay_minutes
+
+action:
+  - service: switch.turn_off
+    target:
+      entity_id: !input device_entity
